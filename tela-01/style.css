@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    background: url("https://fastly.picsum.photos/id/66/1600/900.jpg?hmac=YQN5cva1C6HQ-BbX7oRck2JqZZsJmYOLwJ3b3P9UU9Y");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.container{
+    width: 26.25em;
+    background-color: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 10px;
+    color: #fff;
+    padding: 2em 2.5em;
+    backdrop-filter: blur(1.25em);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.container h1{
+    font-size: 2em;
+    text-align: center;
+}
+
+.imput-box{
+    position: relative;
+    width: 100%;
+    height: 3em;
+    margin: 2em 0;
+}
+
+.imput-box input{
+    width: 100%;
+    height: 100%;
+    background-color: #ececec;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 10px;
+    outline: none;
+    font-size: 1em; 
+    padding: 1.25em 2.8em 1.25em 1.25em;
+
+}
+
+.imput-box input::placeholder{
+    color: #313131;
+}
+
+.imput-box img{
+    position: absolute;
+    right: 1.25em;
+    margin-top: .75em;
+}
+
+.imput-box a{
+    font-size: 1em;
+    margin: .5em;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.imput-box a:hover{
+    text-decoration: underline;
+}
+
+.button{
+    width: 100%;
+    height: 3em;
+    border: none;
+    border-radius: 10px;
+    background-color: #210606;
+    font-weight: 700;
+    margin-top: 1.5em;
+    font-size: 1em;
+    margin-top: .25em;
+    color: #fefbfb;
+    outline: none;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color:#340d0d ;
+}
+
+.register{
+    text-align: center;
+    margin: .5em;
+}
+
+.register p {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.register p a {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
