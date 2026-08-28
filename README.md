@@ -16,24 +16,24 @@ Os projetos estão organizados de acordo com o nível e as tecnologias utilizada
 
 Mini projetos focados na criação e estilização de interfaces, como:
 
-* Landing Pages
+* Landing Pages - Falta fazer
 * Telas de login
-* Cards
-* Formulários
-* Menus
-* Interfaces responsivas
-* Componentes visuais
+* Cards - Falta fazer
+* Formulários - Falta fazer
+* Menus - Falta fazer
+* Interfaces responsivas - Falta fazer
+* Componentes visuais - Falta fazer
 
 ### ⚡ HTML + CSS + JavaScript
 
 Projetos que, além da interface, possuem interações e funcionalidades utilizando JavaScript, como:
 
 * Calculadoras
-* Listas de tarefas
-* Validações de formulários
-* Menus interativos
-* Contadores
-* Pequenas aplicações web
+* Listas de tarefas - Falta fazer
+* Validações de formulários - Falta fazer
+* Menus interativos - Falta fazer
+* Contadores - Falta fazer
+* Pequenas aplicações web - Falta fazer
 
 ## 🎯 Objetivo
 
