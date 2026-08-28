@@ -15,7 +15,7 @@ document.getElementById('resultado').innerHTML = resultado.substring(0, resultad
 function calculate(){
 var resultado = document.getElementById('resultado').innerHTML;
 if(resultado){
-document.getElementById('resultado').innerHTML = eval(resultado);
+document.getElementById('resultado').innerHTML = eval(resultado).toFixed(2).replace(/\.?0+$/, '');
 } else {
 document.getElementById('resultado').innerHTML = ". . . .";
 }}
