@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="lado-esquerdo">
+            <h1>Olá!</h1>
+
+            <p>
+                Preencha o formulário ao lado.</br>
+                Seus dados serão utilizados apenas para contato.
+            </p>
+        </div>
+
+        <form class="formulario">
+
+            <h2>Formulario</h2>
+
+            <p class="subtitulo">
+                Preencha os dados abaixo.
+            </p>
+
+            <div class="campo">
+                <label for="nome">Nome completo</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="seuemail@email.com"
+                    required
+                >
+            </div>
+
+            <div class="linha">
+
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        placeholder="(00) 00000-0000"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="cidade">Cidade</label>
+                    <input
+                        type="text"
+                        id="cidade"
+                        name="cidade"
+                        placeholder="Sua cidade"
+                    >
+                </div>
+
+            </div>
+
+            <div class="campo">
+                <label for="assunto">Assunto</label>
+
+                <select id="assunto" name="assunto">
+                    <option value="">Selecione uma opção</option>
+                    <option value="duvida">Dúvida</option>
+                    <option value="suporte">Suporte</option>
+                    <option value="orcamento">Orçamento</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="mensagem">Mensagem</label>
+
+                <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    placeholder="Digite sua mensagem..."
+                ></textarea>
+            </div>
+
+            <div class="termos">
+                <input
+                    type="checkbox"
+                    id="aceite"
+                    required
+                >
+
+                <label for="aceite">
+                    Concordo com os termos de uso.
+                </label>
+            </div>
+
+            <button type="submit" class="botao">
+                Enviar formulário
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
