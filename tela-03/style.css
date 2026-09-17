@@ -1,0 +1,919 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --primary-light: #eef2ff;
+
+    --background: #b0c6f4;
+    --white: #ffffff;
+
+    --text: #111827;
+    --text-secondary: #6b7280;
+    --text-light: #9ca3af;
+
+    --border: #e5e7eb;
+
+    --success: #16a34a;
+    --success-bg: #f0fdf4;
+
+    --danger: #dc2626;
+    --danger-bg: #fef2f2;
+
+    --shadow:
+        0 25px 60px rgba(15, 23, 42, 0.12);
+
+    --radius: 22px;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    background: var(--background);
+    color: var(--text);
+}
+
+
+/* =========================================
+   CONTAINER PRINCIPAL
+========================================= */
+
+.auth-container {
+    width: min(1100px, calc(100% - 40px));
+    min-height: 680px;
+
+    margin: 50px auto;
+
+    display: grid;
+    grid-template-columns: 42% 58%;
+
+    background: var(--white);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* =========================================
+   PAINEL DA MARCA
+========================================= */
+
+.brand-panel {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,255,255,.15),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #312e81,
+            #4f46e5 50%,
+            #6366f1
+        );
+}
+
+.brand-panel::before {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    right: -120px;
+    top: -100px;
+
+    background: rgba(255,255,255,.06);
+}
+
+.brand-panel::after {
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+
+    left: -100px;
+    bottom: -80px;
+
+    background: rgba(255,255,255,.06);
+}
+
+.brand-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 360px;
+}
+
+.logo {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+    border-radius: 16px;
+
+    background: rgba(255,255,255,.15);
+
+    backdrop-filter: blur(10px);
+
+    font-size: 24px;
+}
+
+.brand-content h1 {
+    font-size: 42px;
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+
+    letter-spacing: -1.5px;
+}
+
+.brand-content > p {
+    color: rgba(255,255,255,.82);
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.brand-features {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    color: rgba(255,255,255,.92);
+
+    font-size: 14px;
+}
+
+.feature-icon {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.15);
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   PAINEL DOS FORMULÁRIOS
+========================================= */
+
+.form-panel {
+    display: flex;
+    align-items: center;
+
+    padding: 60px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 450px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.form-header {
+    margin-bottom: 32px;
+}
+
+.eyebrow {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--primary);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+.form-header h2 {
+    margin-bottom: 9px;
+
+    font-size: 30px;
+    line-height: 1.2;
+
+    letter-spacing: -0.8px;
+}
+
+.form-header p {
+    color: var(--text-secondary);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #374151;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.label-row a {
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.label-row a:hover {
+    text-decoration: underline;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+
+    left: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #9ca3af;
+
+    font-size: 13px;
+
+    pointer-events: none;
+}
+
+.input-wrapper input {
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 45px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 11px;
+
+    outline: none;
+
+    background: #fafafa;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+.input-wrapper input::placeholder {
+    color: #b0b5bd;
+}
+
+.input-wrapper input:focus {
+    background: white;
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 4px rgba(79,70,229,.08);
+}
+
+.password-toggle {
+    position: absolute;
+
+    right: 12px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--primary);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   BOTÃO PRINCIPAL
+========================================= */
+
+.primary-button {
+    width: 100%;
+    height: 50px;
+
+    margin-top: 8px;
+
+    border: 0;
+    border-radius: 11px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        transform .15s ease,
+        box-shadow .2s ease;
+}
+
+.primary-button:hover {
+    background: var(--primary-dark);
+
+    box-shadow:
+        0 8px 20px rgba(79,70,229,.25);
+}
+
+.primary-button:active {
+    transform: translateY(1px);
+}
+
+
+/* =========================================
+   DIVISOR
+========================================= */
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin: 27px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    height: 1px;
+
+    flex: 1;
+
+    background: var(--border);
+}
+
+.divider span {
+    color: var(--text-light);
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   LINKS
+========================================= */
+
+.switch-text {
+    text-align: center;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+}
+
+.link-button {
+    border: 0;
+
+    background: transparent;
+
+    color: var(--primary);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.link-button:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   MENSAGENS
+========================================= */
+
+.message {
+    display: none;
+
+    padding: 11px 13px;
+
+    margin: 5px 0 12px;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.message.success {
+    display: block;
+
+    color: #166534;
+
+    background: var(--success-bg);
+
+    border: 1px solid #bbf7d0;
+}
+
+.message.error {
+    display: block;
+
+    color: #991b1b;
+
+    background: var(--danger-bg);
+
+    border: 1px solid #fecaca;
+}
+
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.success-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    color: var(--success);
+
+    background: var(--success-bg);
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.dashboard-header h2 {
+    font-size: 28px;
+
+    margin-bottom: 8px;
+
+    letter-spacing: -.5px;
+}
+
+.dashboard-header p {
+    color: var(--text-secondary);
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   CARD DO USUÁRIO
+========================================= */
+
+.user-card {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    background: #fafafa;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    overflow: hidden;
+}
+
+.user-info strong {
+    font-size: 14px;
+}
+
+.user-info span {
+    color: var(--text-secondary);
+
+    font-size: 12px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   STATUS DO BANCO
+========================================= */
+
+.storage-info {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 16px;
+
+    margin-bottom: 20px;
+
+    border-radius: 13px;
+
+    background: var(--primary-light);
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+
+    flex-shrink: 0;
+
+    margin-top: 5px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 0 0 4px rgba(34,197,94,.12);
+}
+
+.storage-info strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 12px;
+
+    color: #3730a3;
+}
+
+.storage-info p {
+    color: #6366f1;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   BOTÃO SECUNDÁRIO
+========================================= */
+
+.secondary-button {
+    width: 100%;
+    height: 48px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 11px;
+
+    background: white;
+
+    color: #374151;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all .2s ease;
+}
+
+.secondary-button:hover {
+    background: #f9fafb;
+
+    border-color: #d1d5db;
+}
+
+
+/* =========================================
+   TOAST
+========================================= */
+
+.toast {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    max-width: 320px;
+
+    padding: 14px 18px;
+
+    border-radius: 10px;
+
+    background: #111827;
+
+    color: white;
+
+    font-size: 13px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.15);
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    pointer-events: none;
+
+    transition: all .3s ease;
+
+    z-index: 100;
+}
+
+.toast.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   UTILITÁRIO
+========================================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .auth-container {
+        grid-template-columns: 1fr;
+
+        width: min(600px, calc(100% - 30px));
+
+        min-height: auto;
+
+        margin: 30px auto;
+    }
+
+    .brand-panel {
+        min-height: 280px;
+
+        padding: 40px;
+    }
+
+    .brand-content {
+        max-width: 100%;
+    }
+
+    .brand-content h1 {
+        font-size: 34px;
+    }
+
+    .brand-content > p {
+        margin-bottom: 25px;
+    }
+
+    .brand-features {
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 10px;
+    }
+
+    .feature {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+
+        font-size: 11px;
+    }
+
+    .form-panel {
+        padding: 45px 35px;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    body {
+        background: white;
+    }
+
+    .auth-container {
+        width: 100%;
+
+        margin: 0;
+
+        border-radius: 0;
+
+        box-shadow: none;
+    }
+
+    .brand-panel {
+        min-height: 250px;
+
+        padding: 30px 25px;
+    }
+
+    .logo {
+        width: 48px;
+        height: 48px;
+
+        margin-bottom: 20px;
+    }
+
+    .brand-content h1 {
+        font-size: 30px;
+    }
+
+    .brand-content > p {
+        font-size: 13px;
+
+        margin-bottom: 22px;
+    }
+
+    .brand-features {
+        display: none;
+    }
+
+    .form-panel {
+        padding: 35px 25px;
+    }
+
+    .form-header h2 {
+        font-size: 25px;
+    }
+
+    .form-header {
+        margin-bottom: 27px;
+    }
+
+    .toast {
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+
+        max-width: none;
+    }
+}
+
+
+@media (max-width: 350px) {
+
+    .form-panel {
+        padding: 30px 18px;
+    }
+
+    .brand-panel {
+        padding: 28px 18px;
+    }
+
+    .input-wrapper input {
+        font-size: 13px;
+    }
+
+}

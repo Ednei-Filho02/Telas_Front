@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portal | Login</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="auth-container">
+
+        <!-- Painel esquerdo -->
+        <section class="brand-panel">
+
+            <div class="brand-content">
+
+                <div class="logo">
+                    <span>◆</span>
+                </div>
+
+                <h1>Portal</h1>
+
+                <p>
+                    Uma plataforma simples, segura e moderna
+                    para gerenciamento de usuários.
+                </p>
+
+                <div class="brand-features">
+                    <div class="feature">
+                        <div class="feature-icon">✓</div>
+                        <span>Acesso rápido e intuitivo</span>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">✓</div>
+                        <span>Interface responsiva</span>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">✓</div>
+                        <span>Dados armazenados localmente</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Painel direito -->
+        <section class="form-panel">
+
+            <div class="form-container">
+
+                <!-- LOGIN -->
+                <div id="loginForm">
+
+                    <div class="form-header">
+                        <span class="eyebrow">BEM-VINDO DE VOLTA</span>
+
+                        <h2>Entrar na sua conta</h2>
+
+                        <p>
+                            Informe seus dados para acessar o sistema.
+                        </p>
+                    </div>
+
+
+                    <form id="login">
+
+                        <div class="input-group">
+
+                            <label for="loginEmail">
+                                E-mail
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">✉</span>
+
+                                <input
+                                    type="email"
+                                    id="loginEmail"
+                                    placeholder="seu@email.com"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <div class="label-row">
+
+                                <label for="loginPassword">
+                                    Senha
+                                </label>
+
+                                <a href="#" id="forgotPassword">
+                                    Esqueceu a senha?
+                                </a>
+
+                            </div>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">●</span>
+
+                                <input
+                                    type="password"
+                                    id="loginPassword"
+                                    placeholder="Digite sua senha"
+                                    autocomplete="current-password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    data-target="loginPassword"
+                                >
+                                    Mostrar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div id="loginMessage" class="message"></div>
+
+
+                        <button
+                            type="submit"
+                            class="primary-button"
+                        >
+                            Entrar
+                        </button>
+
+                    </form>
+
+
+                    <div class="divider">
+                        <span>ou</span>
+                    </div>
+
+
+                    <p class="switch-text">
+                        Ainda não possui uma conta?
+
+                        <button
+                            type="button"
+                            class="link-button"
+                            id="showRegister"
+                        >
+                            Criar conta
+                        </button>
+                    </p>
+
+                </div>
+
+
+                <!-- CADASTRO -->
+                <div id="registerForm" class="hidden">
+
+                    <div class="form-header">
+
+                        <span class="eyebrow">
+                            NOVO USUÁRIO
+                        </span>
+
+                        <h2>Criar uma conta</h2>
+
+                        <p>
+                            Preencha os dados abaixo para começar.
+                        </p>
+
+                    </div>
+
+
+                    <form id="register">
+
+                        <div class="input-group">
+
+                            <label for="registerName">
+                                Nome completo
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">●</span>
+
+                                <input
+                                    type="text"
+                                    id="registerName"
+                                    placeholder="Seu nome completo"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="registerEmail">
+                                E-mail
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">✉</span>
+
+                                <input
+                                    type="email"
+                                    id="registerEmail"
+                                    placeholder="seu@email.com"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="registerPassword">
+                                Senha
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">●</span>
+
+                                <input
+                                    type="password"
+                                    id="registerPassword"
+                                    placeholder="Mínimo de 6 caracteres"
+                                    autocomplete="new-password"
+                                    minlength="6"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    data-target="registerPassword"
+                                >
+                                    Mostrar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="confirmPassword">
+                                Confirmar senha
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">●</span>
+
+                                <input
+                                    type="password"
+                                    id="confirmPassword"
+                                    placeholder="Digite a senha novamente"
+                                    autocomplete="new-password"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div id="registerMessage" class="message"></div>
+
+
+                        <button
+                            type="submit"
+                            class="primary-button"
+                        >
+                            Criar minha conta
+                        </button>
+
+                    </form>
+
+
+                    <div class="divider">
+                        <span>ou</span>
+                    </div>
+
+
+                    <p class="switch-text">
+
+                        Já possui uma conta?
+
+                        <button
+                            type="button"
+                            class="link-button"
+                            id="showLogin"
+                        >
+                            Fazer login
+                        </button>
+
+                    </p>
+
+                </div>
+
+
+                <!-- DASHBOARD -->
+                <div id="dashboard" class="hidden">
+
+                    <div class="dashboard-header">
+
+                        <div class="success-icon">
+                            ✓
+                        </div>
+
+                        <span class="eyebrow">
+                            LOGIN REALIZADO
+                        </span>
+
+                        <h2>Olá, <span id="userName"></span>!</h2>
+
+                        <p>
+                            Você está autenticado no sistema.
+                        </p>
+
+                    </div>
+
+
+                    <div class="user-card">
+
+                        <div class="avatar" id="userAvatar">
+                            U
+                        </div>
+
+                        <div class="user-info">
+
+                            <strong id="dashboardName">
+                                Usuário
+                            </strong>
+
+                            <span id="dashboardEmail">
+                                email@email.com
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="storage-info">
+
+                        <div class="status-dot"></div>
+
+                        <div>
+                            <strong>Banco local ativo</strong>
+
+                            <p>
+                                Seus dados estão sendo armazenados
+                                neste navegador.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="logout"
+                        class="secondary-button"
+                    >
+                        Sair da conta
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <div id="toast" class="toast"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
