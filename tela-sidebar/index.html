@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sidebar Recolhível</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+
+            <div class="logo">
+                <span class="logo-icon">◆</span>
+                <span class="logo-text">MinhaApp</span>
+            </div>
+
+            <button
+                class="toggle-button"
+                id="toggleButton"
+                aria-label="Recolher menu"
+                title="Recolher menu"
+            >
+                ‹
+            </button>
+
+        </div>
+
+
+        <!-- NAVEGAÇÃO -->
+        <nav class="navigation">
+
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">⌂</span>
+                <span class="nav-text">Início</span>
+            </a>
+
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">▦</span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">♙</span>
+                <span class="nav-text">Usuários</span>
+            </a>
+
+
+            <!-- RELATÓRIOS COM SUBMENU -->
+            <div class="nav-group">
+
+                <button
+                    class="nav-item nav-parent"
+                    id="reportsButton"
+                    type="button"
+                >
+
+                    <span class="nav-icon">▤</span>
+
+                    <span class="nav-text">
+                        Relatórios
+                    </span>
+
+                    <span class="submenu-arrow">
+                        ›
+                    </span>
+
+                </button>
+
+
+                <div class="submenu" id="reportsSubmenu">
+
+                    <a href="#" class="submenu-item">
+                        <span class="submenu-dot"></span>
+                        <span>Ativos</span>
+                    </a>
+
+                    <a href="#" class="submenu-item">
+                        <span class="submenu-dot"></span>
+                        <span>Visitas</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <span class="nav-text">Configurações</span>
+            </a>
+
+        </nav>
+
+
+        <!-- RODAPÉ -->
+        <div class="sidebar-footer">
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">?</span>
+                <span class="nav-text">Ajuda</span>
+            </a>
+
+
+            <div class="user-profile">
+
+                <div class="avatar">
+                    JS
+                </div>
+
+                <div class="user-info">
+
+                    <strong>João Silva</strong>
+
+                    <span>
+                        Administrador
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Abrir menu"
+            >
+                ☰
+            </button>
+
+            <h1>
+                Dashboard
+            </h1>
+
+            <div class="topbar-user">
+                João Silva
+            </div>
+
+        </header>
+
+
+        <section class="content">
+
+            <div class="welcome">
+
+                <h2>
+                    Olá, João! 👋
+                </h2>
+
+                <p>
+                    Esta é uma aplicação simples com uma barra lateral
+                    recolhível.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <span class="card-icon blue">
+                        ◈
+                    </span>
+
+                    <div>
+
+                        <span class="card-label">
+                            Usuários
+                        </span>
+
+                        <strong>
+                            1.248
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <span class="card-icon green">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <span class="card-label">
+                            Ativos
+                        </span>
+
+                        <strong>
+                            982
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <span class="card-icon orange">
+                        ↗
+                    </span>
+
+                    <div>
+
+                        <span class="card-label">
+                            Visitas
+                        </span>
+
+                        <strong>
+                            8.421
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <h2>
+                    Conteúdo
+                </h2>
+
+                <p>
+                    Use o menu lateral para navegar pela aplicação.
+                </p>
+
+                <p>
+                    O item "Relatórios" possui um submenu com outras opções.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- OVERLAY MOBILE -->
+    <div
+        class="overlay"
+        id="overlay"
+    ></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
