@@ -1,0 +1,1893 @@
+/* =========================================================
+   DEVSPACE
+   STYLE.CSS
+   Estilos globais do projeto
+========================================================= */
+
+
+/* =========================================================
+   01. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: #080b12;
+    color: #ffffff;
+
+    line-height: 1.5;
+
+    overflow-x: hidden;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   02. VARIÁVEIS
+========================================================= */
+
+:root {
+
+    /* Cores */
+
+    --bg-primary: #080b12;
+
+    --bg-secondary: #0d1119;
+
+    --bg-card: #111722;
+
+    --bg-card-hover: #151c29;
+
+    --border: rgba(255, 255, 255, 0.08);
+
+    --border-hover: rgba(255, 255, 255, 0.16);
+
+    --text-primary: #ffffff;
+
+    --text-secondary: #a4acbb;
+
+    --text-muted: #737c8c;
+
+    --primary: #6c5ce7;
+
+    --primary-hover: #5b4bd5;
+
+    --secondary: #00cec9;
+
+
+    /* Gradientes */
+
+    --gradient-primary:
+        linear-gradient(
+            135deg,
+            #6c5ce7,
+            #00cec9
+        );
+
+
+    --gradient-background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(108, 92, 231, 0.16),
+            transparent 35%
+        );
+
+
+    /* Sombras */
+
+    --shadow-small:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+
+    --shadow-large:
+        0 25px 70px rgba(0, 0, 0, 0.45);
+
+
+    /* Bordas */
+
+    --radius-small: 8px;
+
+    --radius-medium: 12px;
+
+    --radius-large: 18px;
+}
+
+
+/* =========================================================
+   03. NAVBAR
+========================================================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 76px;
+
+    z-index: 1000;
+
+
+    background:
+        rgba(8, 11, 18, 0.82);
+
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.nav-container {
+
+    width:
+        min(
+            1200px,
+            92%
+        );
+
+    height: 100%;
+
+    margin: 0 auto;
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   04. LOGO
+========================================================= */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+
+    flex-shrink: 0;
+
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: var(--text-primary);
+}
+
+
+.logo-icon {
+
+    width: 34px;
+    height: 34px;
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+    border-radius: 10px;
+
+
+    background:
+        var(--gradient-primary);
+
+
+    color: #ffffff;
+
+
+    font-size: 14px;
+
+
+    box-shadow:
+        0 5px 20px
+        rgba(108, 92, 231, 0.2);
+}
+
+
+.logo-text {
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   05. MENU PRINCIPAL
+========================================================= */
+
+.nav-menu {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.nav-link,
+.dropdown-button {
+
+    height: 42px;
+
+
+    display: flex;
+
+    align-items: center;
+
+
+    padding:
+        0 15px;
+
+
+    border: none;
+
+    border-radius:
+        var(--radius-small);
+
+
+    background:
+        transparent;
+
+
+    color:
+        var(--text-secondary);
+
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.nav-link:hover,
+.dropdown-button:hover {
+
+    color:
+        var(--text-primary);
+
+
+    background:
+        rgba(255, 255, 255, 0.06);
+}
+
+
+.nav-link.active {
+
+    color:
+        #ffffff;
+
+
+    background:
+        rgba(108, 92, 231, 0.13);
+}
+
+
+/* =========================================================
+   06. DROPDOWN
+========================================================= */
+
+.nav-dropdown {
+
+    position: relative;
+}
+
+
+.dropdown-button {
+
+    gap: 8px;
+}
+
+
+.dropdown-arrow {
+
+    font-size: 12px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.nav-dropdown:hover
+.dropdown-arrow {
+
+    transform:
+        rotate(180deg);
+}
+
+
+/* =========================================================
+   DROPDOWN MENU
+========================================================= */
+
+.dropdown-menu {
+
+    position: absolute;
+
+
+    top:
+        calc(100% + 12px);
+
+    left: 0;
+
+
+    width: 310px;
+
+
+    padding: 8px;
+
+
+    border:
+        1px solid var(--border);
+
+
+    border-radius:
+        var(--radius-medium);
+
+
+    background:
+        rgba(17, 23, 34, 0.98);
+
+
+    box-shadow:
+        var(--shadow-large);
+
+
+    backdrop-filter:
+        blur(20px);
+
+
+    -webkit-backdrop-filter:
+        blur(20px);
+
+
+    opacity: 0;
+
+    visibility: hidden;
+
+
+    transform:
+        translateY(-8px);
+
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.nav-dropdown:hover
+.dropdown-menu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   DROPDOWN ITENS
+========================================================= */
+
+.dropdown-menu > a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+
+    padding: 12px;
+
+
+    border-radius:
+        10px;
+
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.dropdown-menu > a:hover {
+
+    background:
+        rgba(108, 92, 231, 0.12);
+
+
+    transform:
+        translateX(3px);
+}
+
+
+.dropdown-icon {
+
+    width: 40px;
+    height: 40px;
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+    flex-shrink: 0;
+
+
+    border-radius: 10px;
+
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+
+    font-size: 17px;
+}
+
+
+.dropdown-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.dropdown-content strong {
+
+    color:
+        var(--text-primary);
+
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.dropdown-content small {
+
+    color:
+        var(--text-muted);
+
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   07. AÇÕES
+========================================================= */
+
+.nav-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+
+    flex-shrink: 0;
+}
+
+
+.search-button {
+
+    width: 40px;
+    height: 40px;
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+    border: none;
+
+    border-radius:
+        var(--radius-small);
+
+
+    background:
+        transparent;
+
+
+    color:
+        var(--text-primary);
+
+
+    font-size: 15px;
+
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.search-button:hover {
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+
+    transform:
+        translateY(-1px);
+}
+
+
+.login-button {
+
+    height: 40px;
+
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+    padding:
+        0 18px;
+
+
+    border:
+        1px solid transparent;
+
+
+    border-radius:
+        var(--radius-small);
+
+
+    background:
+        #ffffff;
+
+
+    color:
+        #080b12;
+
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.login-button:hover {
+
+    transform:
+        translateY(-2px);
+
+
+    box-shadow:
+        0 8px 25px
+        rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   08. BOTÃO MOBILE
+========================================================= */
+
+.mobile-menu-button {
+
+    display: none;
+
+
+    width: 42px;
+    height: 42px;
+
+
+    margin-left: auto;
+
+
+    border: none;
+
+    border-radius:
+        var(--radius-small);
+
+
+    background:
+        transparent;
+}
+
+
+.mobile-menu-button span {
+
+    display: block;
+
+
+    width: 23px;
+    height: 2px;
+
+
+    margin:
+        5px auto;
+
+
+    border-radius: 10px;
+
+
+    background:
+        #ffffff;
+
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+/* =========================================================
+   09. HERO
+========================================================= */
+
+.hero {
+
+    position: relative;
+
+
+    min-height:
+        720px;
+
+
+    padding:
+        140px 20px
+        80px;
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+    overflow: hidden;
+
+
+    background:
+        var(--gradient-background);
+}
+
+
+.hero::before {
+
+    content: "";
+
+
+    position: absolute;
+
+
+    width: 500px;
+    height: 500px;
+
+
+    top: 80px;
+    left: 50%;
+
+
+    transform:
+        translateX(-50%);
+
+
+    border-radius: 50%;
+
+
+    background:
+        rgba(108, 92, 231, 0.06);
+
+
+    filter:
+        blur(80px);
+
+
+    pointer-events: none;
+}
+
+
+.hero-container {
+
+    position: relative;
+
+    z-index: 1;
+
+
+    width:
+        min(
+            900px,
+            100%
+        );
+
+
+    margin:
+        0 auto;
+
+
+    text-align:
+        center;
+}
+
+
+.hero-content {
+
+    max-width:
+        800px;
+
+
+    margin:
+        0 auto;
+}
+
+
+/* =========================================================
+   HERO BADGE
+========================================================= */
+
+.hero-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+
+    margin-bottom:
+        25px;
+
+
+    padding:
+        8px 14px;
+
+
+    border:
+        1px solid
+        rgba(108, 92, 231, 0.3);
+
+
+    border-radius:
+        50px;
+
+
+    background:
+        rgba(108, 92, 231, 0.08);
+
+
+    color:
+        #aaa0ff;
+
+
+    font-size:
+        12px;
+
+
+    font-weight:
+        600;
+
+
+    letter-spacing:
+        0.3px;
+}
+
+
+/* =========================================================
+   HERO TÍTULO
+========================================================= */
+
+.hero h1 {
+
+    margin-bottom:
+        24px;
+
+
+    font-size:
+        clamp(
+            48px,
+            8vw,
+            88px
+        );
+
+
+    line-height:
+        1.02;
+
+
+    letter-spacing:
+        -4px;
+
+
+    font-weight:
+        800;
+}
+
+
+.hero h1 span {
+
+    display:
+        block;
+
+
+    background:
+        var(--gradient-primary);
+
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+
+    -webkit-text-fill-color:
+        transparent;
+}
+
+
+/* =========================================================
+   HERO PARÁGRAFO
+========================================================= */
+
+.hero p {
+
+    max-width:
+        620px;
+
+
+    margin:
+        0 auto;
+
+
+    color:
+        var(--text-secondary);
+
+
+    font-size:
+        17px;
+
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   HERO BOTÕES
+========================================================= */
+
+.hero-buttons {
+
+    display:
+        flex;
+
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+
+    gap:
+        12px;
+
+
+    margin-top:
+        32px;
+}
+
+
+.primary-button,
+.secondary-button {
+
+    min-height:
+        46px;
+
+
+    display:
+        inline-flex;
+
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+
+    padding:
+        0 22px;
+
+
+    border-radius:
+        var(--radius-small);
+
+
+    font-size:
+        13px;
+
+
+    font-weight:
+        650;
+
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.primary-button {
+
+    border:
+        1px solid transparent;
+
+
+    background:
+        var(--primary);
+
+
+    color:
+        #ffffff;
+
+
+    box-shadow:
+        0 8px 25px
+        rgba(108, 92, 231, 0.18);
+}
+
+
+.primary-button:hover {
+
+    background:
+        var(--primary-hover);
+
+
+    transform:
+        translateY(-2px);
+
+
+    box-shadow:
+        0 12px 30px
+        rgba(108, 92, 231, 0.25);
+}
+
+
+.secondary-button {
+
+    border:
+        1px solid var(--border);
+
+
+    background:
+        rgba(255, 255, 255, 0.02);
+
+
+    color:
+        #ffffff;
+}
+
+
+.secondary-button:hover {
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+
+    border-color:
+        var(--border-hover);
+
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   10. CONTAINER DE SEÇÕES
+========================================================= */
+
+.section-container {
+
+    width:
+        min(
+            1100px,
+            90%
+        );
+
+
+    margin:
+        0 auto;
+}
+
+
+/* =========================================================
+   11. SEÇÃO DE ASSUNTOS
+========================================================= */
+
+.topics {
+
+    padding:
+        100px 0;
+
+
+    background:
+        var(--bg-primary);
+}
+
+
+.section-header {
+
+    max-width:
+        650px;
+
+
+    margin-bottom:
+        45px;
+}
+
+
+.section-label {
+
+    display:
+        inline-block;
+
+
+    margin-bottom:
+        12px;
+
+
+    color:
+        #8e82ff;
+
+
+    font-size:
+        11px;
+
+
+    font-weight:
+        700;
+
+
+    letter-spacing:
+        1.5px;
+}
+
+
+.section-header h2,
+.about h2 {
+
+    margin-bottom:
+        15px;
+
+
+    color:
+        var(--text-primary);
+
+
+    font-size:
+        clamp(
+            30px,
+            4vw,
+            42px
+        );
+
+
+    line-height:
+        1.15;
+
+
+    letter-spacing:
+        -1.5px;
+}
+
+
+.section-header p {
+
+    color:
+        var(--text-secondary);
+
+
+    font-size:
+        15px;
+
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   GRID DE ASSUNTOS
+========================================================= */
+
+.topics-grid {
+
+    display:
+        grid;
+
+
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+
+
+    gap:
+        18px;
+}
+
+
+/* =========================================================
+   CARD DE ASSUNTO
+========================================================= */
+
+.topic-card {
+
+    padding:
+        25px;
+
+
+    border:
+        1px solid var(--border);
+
+
+    border-radius:
+        var(--radius-large);
+
+
+    background:
+        var(--bg-card);
+
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.topic-card:hover {
+
+    transform:
+        translateY(-6px);
+
+
+    border-color:
+        rgba(108, 92, 231, 0.35);
+
+
+    background:
+        var(--bg-card-hover);
+}
+
+
+.topic-icon {
+
+    width:
+        46px;
+
+    height:
+        46px;
+
+
+    display:
+        flex;
+
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+
+    margin-bottom:
+        20px;
+
+
+    border-radius:
+        12px;
+
+
+    background:
+        rgba(108, 92, 231, 0.1);
+
+
+    font-size:
+        19px;
+}
+
+
+.topic-card h3 {
+
+    margin-bottom:
+        10px;
+
+
+    font-size:
+        17px;
+}
+
+
+.topic-card p {
+
+    min-height:
+        72px;
+
+
+    margin-bottom:
+        18px;
+
+
+    color:
+        var(--text-muted);
+
+
+    font-size:
+        13px;
+
+
+    line-height:
+        1.65;
+}
+
+
+.topic-card a {
+
+    color:
+        #9288ff;
+
+
+    font-size:
+        13px;
+
+
+    font-weight:
+        600;
+}
+
+
+.topic-card a:hover {
+
+    color:
+        #b0a8ff;
+}
+
+
+/* =========================================================
+   12. SOBRE
+========================================================= */
+
+.about {
+
+    padding:
+        120px 0;
+
+
+    background:
+        var(--bg-secondary);
+}
+
+
+.about-content {
+
+    max-width:
+        700px;
+}
+
+
+.about h2 {
+
+    max-width:
+        650px;
+}
+
+
+.about p {
+
+    margin-bottom:
+        15px;
+
+
+    color:
+        var(--text-secondary);
+
+
+    font-size:
+        15px;
+
+
+    line-height:
+        1.8;
+}
+
+
+/* =========================================================
+   13. FOOTER
+========================================================= */
+
+.footer {
+
+    border-top:
+        1px solid var(--border);
+
+
+    background:
+        #06090e;
+}
+
+
+.footer-container {
+
+    width:
+        min(
+            1100px,
+            90%
+        );
+
+
+    min-height:
+        100px;
+
+
+    margin:
+        0 auto;
+
+
+    display:
+        flex;
+
+
+    align-items:
+        center;
+
+
+    justify-content:
+        space-between;
+
+
+    gap:
+        20px;
+}
+
+
+.footer-logo {
+
+    display:
+        flex;
+
+
+    align-items:
+        center;
+
+
+    gap:
+        9px;
+
+
+    font-size:
+        15px;
+
+
+    font-weight:
+        650;
+}
+
+
+.footer-logo .logo-icon {
+
+    width:
+        28px;
+
+    height:
+        28px;
+
+
+    border-radius:
+        8px;
+
+
+    font-size:
+        11px;
+}
+
+
+.footer-container p {
+
+    color:
+        var(--text-muted);
+
+
+    font-size:
+        12px;
+}
+
+
+/* =========================================================
+   14. RESPONSIVIDADE
+========================================================= */
+
+
+/* -----------------------------------------
+   TABLET
+----------------------------------------- */
+
+@media (max-width: 1000px) {
+
+    .nav-menu {
+
+        margin-left:
+            20px;
+
+        margin-right:
+            20px;
+    }
+
+
+    .nav-link,
+    .dropdown-button {
+
+        padding:
+            0 10px;
+    }
+
+
+    .topics-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+    }
+
+}
+
+
+/* -----------------------------------------
+   MOBILE
+----------------------------------------- */
+
+@media (max-width: 800px) {
+
+    .navbar {
+
+        height:
+            70px;
+    }
+
+
+    .nav-container {
+
+        width:
+            92%;
+    }
+
+
+    .mobile-menu-button {
+
+        display:
+            block;
+    }
+
+
+    .nav-menu {
+
+        position:
+            absolute;
+
+
+        top:
+            70px;
+
+        left:
+            0;
+
+
+        width:
+            100%;
+
+
+        margin:
+            0;
+
+
+        padding:
+            12px;
+
+
+        display:
+            none;
+
+
+        flex-direction:
+            column;
+
+
+        align-items:
+            stretch;
+
+
+        gap:
+            4px;
+
+
+        border-bottom:
+            1px solid var(--border);
+
+
+        background:
+            rgba(9, 13, 21, 0.98);
+
+
+        box-shadow:
+            var(--shadow-large);
+
+
+        backdrop-filter:
+            blur(20px);
+    }
+
+
+    .nav-menu.active {
+
+        display:
+            flex;
+    }
+
+
+    .nav-link,
+    .dropdown-button {
+
+        width:
+            100%;
+
+
+        height:
+            48px;
+
+
+        justify-content:
+            space-between;
+
+
+        padding:
+            0 14px;
+    }
+
+
+    .nav-dropdown {
+
+        width:
+            100%;
+    }
+
+
+    .dropdown-menu {
+
+        position:
+            static;
+
+
+        width:
+            100%;
+
+
+        margin:
+            3px 0;
+
+
+        display:
+            none;
+
+
+        opacity:
+            1;
+
+
+        visibility:
+            visible;
+
+
+        transform:
+            none;
+
+
+        box-shadow:
+            none;
+
+
+        background:
+            rgba(255, 255, 255, 0.025);
+    }
+
+
+    .nav-dropdown.open
+    .dropdown-menu {
+
+        display:
+            block;
+    }
+
+
+    .nav-dropdown:hover
+    .dropdown-menu {
+
+        display:
+            none;
+    }
+
+
+    .nav-dropdown.open:hover
+    .dropdown-menu {
+
+        display:
+            block;
+    }
+
+
+    .nav-actions {
+
+        display:
+            none;
+    }
+
+
+    .hero {
+
+        min-height:
+            650px;
+
+
+        padding-top:
+            110px;
+    }
+
+
+    .hero h1 {
+
+        letter-spacing:
+            -2.5px;
+    }
+
+
+    .topics {
+
+        padding:
+            80px 0;
+    }
+
+
+    .about {
+
+        padding:
+            90px 0;
+    }
+
+
+    .footer-container {
+
+        padding:
+            25px 0;
+
+
+        flex-direction:
+            column;
+
+
+        justify-content:
+            center;
+
+
+        text-align:
+            center;
+    }
+
+}
+
+
+/* -----------------------------------------
+   MOBILE PEQUENO
+----------------------------------------- */
+
+@media (max-width: 500px) {
+
+    .logo-text {
+
+        font-size:
+            18px;
+    }
+
+
+    .logo-icon {
+
+        width:
+            31px;
+
+        height:
+            31px;
+    }
+
+
+    .hero {
+
+        padding:
+            110px 18px
+            70px;
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            48px;
+
+
+        letter-spacing:
+            -2px;
+    }
+
+
+    .hero p {
+
+        font-size:
+            15px;
+    }
+
+
+    .hero-buttons {
+
+        flex-direction:
+            column;
+
+
+        width:
+            100%;
+    }
+
+
+    .primary-button,
+    .secondary-button {
+
+        width:
+            100%;
+    }
+
+
+    .topics-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .topic-card p {
+
+        min-height:
+            auto;
+    }
+
+
+    .section-container {
+
+        width:
+            88%;
+    }
+
+}
+
+
+/* =========================================================
+   15. ACESSIBILIDADE
+========================================================= */
+
+:focus-visible {
+
+    outline:
+        2px solid
+        #8e82ff;
+
+
+    outline-offset:
+        3px;
+}
+
+
+/* =========================================================
+   FIM DO STYLE.CSS
+========================================================= */

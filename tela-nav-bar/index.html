@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Página inicial do meu site."
+    >
+
+    <title>Soares | Início</title>
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+         NAVBAR
+    ========================================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <!-- LOGO -->
+            <a href="index.html" class="logo">
+                <span class="logo-icon">◆</span>
+
+                <span class="logo-text">
+                    Soares
+                </span>
+            </a>
+
+
+            <!-- BOTÃO DO MENU MOBILE -->
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <!-- MENU PRINCIPAL -->
+            <nav class="nav-menu" id="navMenu">
+
+                <!-- INÍCIO -->
+                <a
+                    href="index.html"
+                    class="nav-link active"
+                >
+                    Início
+                </a>
+
+
+                <!-- ==================================
+                     DROPDOWN - ASSUNTOS
+                =================================== -->
+
+                <div class="nav-dropdown">
+
+                    <button
+                        class="dropdown-button"
+                        type="button"
+                    >
+                        <span>Assuntos</span>
+
+                        <span class="dropdown-arrow">
+                            ▾
+                        </span>
+                    </button>
+
+
+                    <div class="dropdown-menu">
+
+                        <!-- ITEM 1 -->
+                        <a href="#">
+
+                            <span class="dropdown-icon">
+                                💻
+                            </span>
+
+                            <span class="dropdown-content">
+
+                                <strong>
+                                    Programação
+                                </strong>
+
+                                <small>
+                                    HTML, CSS, JavaScript e mais
+                                </small>
+
+                            </span>
+
+                        </a>
+
+
+                        <!-- ITEM 2 -->
+                        <a href="#">
+
+                            <span class="dropdown-icon">
+                                🎨
+                            </span>
+
+                            <span class="dropdown-content">
+
+                                <strong>
+                                    Design
+                                </strong>
+
+                                <small>
+                                    UI, UX e interfaces
+                                </small>
+
+                            </span>
+
+                        </a>
+
+
+                        <!-- ITEM 3 -->
+                        <a href="#">
+
+                            <span class="dropdown-icon">
+                                🚀
+                            </span>
+
+                            <span class="dropdown-content">
+
+                                <strong>
+                                    Tecnologia
+                                </strong>
+
+                                <small>
+                                    Novidades e tendências
+                                </small>
+
+                            </span>
+
+                        </a>
+
+
+                        <!-- ITEM 4 -->
+                        <a href="#">
+
+                            <span class="dropdown-icon">
+                                ⚙️
+                            </span>
+
+                            <span class="dropdown-content">
+
+                                <strong>
+                                    Desenvolvimento
+                                </strong>
+
+                                <small>
+                                    Projetos e aplicações
+                                </small>
+
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJETOS -->
+                <a
+                    href="projetos.html"
+                    class="nav-link"
+                >
+                    Projetos
+                </a>
+
+
+                <!-- SOBRE -->
+                <a
+                    href="#sobre"
+                    class="nav-link"
+                >
+                    Sobre
+                </a>
+
+            </nav>
+
+
+            <!-- ==================================
+                 AÇÕES DA NAVBAR
+            =================================== -->
+
+            <div class="nav-actions">
+
+                <!-- BOTÃO DE PESQUISA -->
+                <button
+                    type="button"
+                    class="search-button"
+                    id="searchButton"
+                    aria-label="Pesquisar"
+                >
+                    🔍
+                </button>
+
+
+                <!-- LOGIN -->
+                <a
+                    href="login.html"
+                    class="login-button"
+                >
+                    Entrar
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ========================================
+         CONTEÚDO PRINCIPAL
+    ========================================= -->
+
+    <main>
+
+        <!-- ==================================
+             HERO
+        =================================== -->
+
+        <section class="hero">
+
+            <div class="hero-container">
+
+                <div class="hero-content">
+
+                    <span class="hero-badge">
+                        ✦ Bem-vindo ao Soares
+                    </span>
+
+
+                    <h1>
+                        Aprenda.
+                        <span>Crie.</span>
+                        Evolua.
+                    </h1>
+
+
+                    <p>
+                        Um espaço para explorar programação,
+                        tecnologia, design e projetos.
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="projetos.html"
+                            class="primary-button"
+                        >
+                            Ver projetos
+                        </a>
+
+
+                        <a
+                            href="#sobre"
+                            class="secondary-button"
+                        >
+                            Saiba mais
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================
+             SEÇÃO DE ASSUNTOS
+        =================================== -->
+
+        <section class="topics" id="assuntos">
+
+            <div class="section-container">
+
+                <div class="section-header">
+
+                    <span class="section-label">
+                        EXPLORE
+                    </span>
+
+                    <h2>
+                        Encontre seu assunto
+                    </h2>
+
+                    <p>
+                        Explore diferentes áreas e encontre
+                        conteúdos para desenvolver suas habilidades.
+                    </p>
+
+                </div>
+
+
+                <div class="topics-grid">
+
+                    <!-- CARD 1 -->
+                    <article class="topic-card">
+
+                        <div class="topic-icon">
+                            💻
+                        </div>
+
+                        <h3>
+                            Programação
+                        </h3>
+
+                        <p>
+                            Aprenda linguagens e tecnologias
+                            para criar aplicações.
+                        </p>
+
+                        <a href="#">
+                            Explorar →
+                        </a>
+
+                    </article>
+
+
+                    <!-- CARD 2 -->
+                    <article class="topic-card">
+
+                        <div class="topic-icon">
+                            🎨
+                        </div>
+
+                        <h3>
+                            Design
+                        </h3>
+
+                        <p>
+                            Crie interfaces bonitas,
+                            modernas e funcionais.
+                        </p>
+
+                        <a href="#">
+                            Explorar →
+                        </a>
+
+                    </article>
+
+
+                    <!-- CARD 3 -->
+                    <article class="topic-card">
+
+                        <div class="topic-icon">
+                            🚀
+                        </div>
+
+                        <h3>
+                            Projetos
+                        </h3>
+
+                        <p>
+                            Transforme suas ideias em
+                            projetos reais.
+                        </p>
+
+                        <a href="projetos.html">
+                            Explorar →
+                        </a>
+
+                    </article>
+
+
+                    <!-- CARD 4 -->
+                    <article class="topic-card">
+
+                        <div class="topic-icon">
+                            ⚙️
+                        </div>
+
+                        <h3>
+                            Tecnologia
+                        </h3>
+
+                        <p>
+                            Descubra ferramentas e novidades
+                            do mundo tecnológico.
+                        </p>
+
+                        <a href="#">
+                            Explorar →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================
+             SOBRE
+        =================================== -->
+
+        <section
+            class="about"
+            id="sobre"
+        >
+
+            <div class="section-container">
+
+                <div class="about-content">
+
+                    <span class="section-label">
+                        SOBRE
+                    </span>
+
+                    <h2>
+                        Um espaço para
+                        aprender e construir.
+                    </h2>
+
+                    <p>
+                        O Soares é um projeto demonstrativo
+                        criado para reunir conteúdos, projetos
+                        e recursos relacionados à tecnologia.
+                    </p>
+
+                    <p>
+                        A ideia é construir uma experiência
+                        simples, moderna e organizada para
+                        quem gosta de programação e tecnologia.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ========================================
+         RODAPÉ
+    ========================================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-logo">
+
+                <span class="logo-icon">
+                    ◆
+                </span>
+
+                <span>
+                    Soares
+                </span>
+
+            </div>
+
+
+            <p>
+                © 2026 Soares. Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

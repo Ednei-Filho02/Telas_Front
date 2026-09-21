@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Projetos desenvolvidos no Soares."
+    >
+
+    <title>Soares | Projetos</title>
+
+    <!-- CSS GLOBAL -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS ESPECÍFICO DA PÁGINA -->
+    <link rel="stylesheet" href="css/projetos.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+         NAVBAR
+    ========================================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <!-- LOGO -->
+            <a href="index.html" class="logo">
+
+                <span class="logo-icon">
+                    ◆
+                </span>
+
+                <span class="logo-text">
+                    Soares
+                </span>
+
+            </a>
+
+
+            <!-- BOTÃO MOBILE -->
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <!-- MENU -->
+            <nav
+                class="nav-menu"
+                id="navMenu"
+            >
+
+                <!-- INÍCIO -->
+                <a
+                    href="index.html"
+                    class="nav-link"
+                >
+                    Início
+                </a>
+
+
+                <!-- ==================================
+                     ASSUNTOS
+                =================================== -->
+
+                <div class="nav-dropdown">
+
+                    <button
+                        class="dropdown-button"
+                        type="button"
+                    >
+
+                        <span>
+                            Assuntos
+                        </span>
+
+                        <span class="dropdown-arrow">
+                            ▾
+                        </span>
+
+                    </button>
+
+
+                    <div class="dropdown-menu">
+
+                        <a href="#">
+
+                            <span class="dropdown-icon">
+                                💻
+                            </span>
+
+                            <span class="dropdown-content">
+
+                                <strong>
+                                    Programação
+                                </strong>
+
+                                <small>
+                                    HTML, CSS, JavaScript e mais
+                                </small>
+
+                            </span>
+
+                        </a>
+
+
+                        <a href="#">
+
+                            <span class="dropdown-icon">
+                                🎨
+                            </span>
+
+                            <span class="dropdown-content">
+
+                                <strong>
+                                    Design
+                                </strong>
+
+                                <small>
+                                    UI, UX e interfaces
+                                </small>
+
+                            </span>
+
+                        </a>
+
+
+                        <a href="#">
+
+                            <span class="dropdown-icon">
+                                🚀
+                            </span>
+
+                            <span class="dropdown-content">
+
+                                <strong>
+                                    Tecnologia
+                                </strong>
+
+                                <small>
+                                    Novidades e tendências
+                                </small>
+
+                            </span>
+
+                        </a>
+
+
+                        <a href="#">
+
+                            <span class="dropdown-icon">
+                                ⚙️
+                            </span>
+
+                            <span class="dropdown-content">
+
+                                <strong>
+                                    Desenvolvimento
+                                </strong>
+
+                                <small>
+                                    Projetos e aplicações
+                                </small>
+
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJETOS -->
+                <a
+                    href="projetos.html"
+                    class="nav-link active"
+                >
+                    Projetos
+                </a>
+
+
+                <!-- SOBRE -->
+                <a
+                    href="index.html#sobre"
+                    class="nav-link"
+                >
+                    Sobre
+                </a>
+
+            </nav>
+
+
+            <!-- AÇÕES -->
+            <div class="nav-actions">
+
+                <button
+                    type="button"
+                    class="search-button"
+                    id="searchButton"
+                    aria-label="Pesquisar"
+                >
+                    🔍
+                </button>
+
+
+                <a
+                    href="login.html"
+                    class="login-button"
+                >
+                    Entrar
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ========================================
+         CONTEÚDO
+    ========================================= -->
+
+    <main>
+
+        <!-- ==================================
+             CABEÇALHO DA PÁGINA
+        =================================== -->
+
+        <section class="projects-hero">
+
+            <div class="projects-container">
+
+                <span class="projects-label">
+                    PORTFÓLIO
+                </span>
+
+
+                <h1>
+                    Meus projetos
+                </h1>
+
+
+                <p>
+                    Explore alguns projetos e experimentos
+                    desenvolvidos utilizando diferentes
+                    tecnologias.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================
+             PROJETOS
+        =================================== -->
+
+        <section class="projects-section">
+
+            <div class="projects-container">
+
+
+                <!-- FILTROS -->
+
+                <div class="projects-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            PROJETOS
+                        </span>
+
+                        <h2>
+                            Trabalhos recentes
+                        </h2>
+
+                    </div>
+
+
+                    <div class="project-filters">
+
+                        <button
+                            class="filter-button active"
+                            data-filter="todos"
+                        >
+                            Todos
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            data-filter="web"
+                        >
+                            Web
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            data-filter="javascript"
+                        >
+                            JavaScript
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            data-filter="design"
+                        >
+                            Design
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- GRID -->
+
+                <div class="projects-grid">
+
+
+                    <!-- =================================
+                         PROJETO 1
+                    ================================== -->
+
+                    <article
+                        class="project-card"
+                        data-category="web"
+                    >
+
+                        <div class="project-image project-image-one">
+
+                            <span class="project-number">
+                                01
+                            </span>
+
+                            <span class="project-tech">
+                                HTML / CSS
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <span class="project-category">
+                                WEB
+                            </span>
+
+                            <h3>
+                                Landing Page
+                            </h3>
+
+                            <p>
+                                Uma landing page moderna,
+                                responsiva e focada em
+                                conversão.
+                            </p>
+
+
+                            <div class="project-footer">
+
+                                <a
+                                    href="#"
+                                    class="project-link"
+                                >
+                                    Ver projeto →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================
+                         PROJETO 2
+                    ================================== -->
+
+                    <article
+                        class="project-card"
+                        data-category="javascript"
+                    >
+
+                        <div class="project-image project-image-two">
+
+                            <span class="project-number">
+                                02
+                            </span>
+
+                            <span class="project-tech">
+                                JAVASCRIPT
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <span class="project-category">
+                                JAVASCRIPT
+                            </span>
+
+                            <h3>
+                                Dashboard
+                            </h3>
+
+                            <p>
+                                Dashboard interativo com
+                                gráficos, filtros e
+                                informações dinâmicas.
+                            </p>
+
+
+                            <div class="project-footer">
+
+                                <a
+                                    href="#"
+                                    class="project-link"
+                                >
+                                    Ver projeto →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================
+                         PROJETO 3
+                    ================================== -->
+
+                    <article
+                        class="project-card"
+                        data-category="design"
+                    >
+
+                        <div class="project-image project-image-three">
+
+                            <span class="project-number">
+                                03
+                            </span>
+
+                            <span class="project-tech">
+                                UI / UX
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <span class="project-category">
+                                DESIGN
+                            </span>
+
+                            <h3>
+                                Interface Mobile
+                            </h3>
+
+                            <p>
+                                Interface de aplicativo
+                                desenvolvida com foco
+                                em experiência do usuário.
+                            </p>
+
+
+                            <div class="project-footer">
+
+                                <a
+                                    href="#"
+                                    class="project-link"
+                                >
+                                    Ver projeto →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================
+                         PROJETO 4
+                    ================================== -->
+
+                    <article
+                        class="project-card"
+                        data-category="web"
+                    >
+
+                        <div class="project-image project-image-four">
+
+                            <span class="project-number">
+                                04
+                            </span>
+
+                            <span class="project-tech">
+                                HTML / CSS / JS
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <span class="project-category">
+                                WEB
+                            </span>
+
+                            <h3>
+                                Sistema Web
+                            </h3>
+
+                            <p>
+                                Aplicação web responsiva
+                                com navegação e componentes
+                                interativos.
+                            </p>
+
+
+                            <div class="project-footer">
+
+                                <a
+                                    href="#"
+                                    class="project-link"
+                                >
+                                    Ver projeto →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================
+                         PROJETO 5
+                    ================================== -->
+
+                    <article
+                        class="project-card"
+                        data-category="javascript"
+                    >
+
+                        <div class="project-image project-image-five">
+
+                            <span class="project-number">
+                                05
+                            </span>
+
+                            <span class="project-tech">
+                                JS
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <span class="project-category">
+                                JAVASCRIPT
+                            </span>
+
+                            <h3>
+                                Lista de tarefas
+                            </h3>
+
+                            <p>
+                                Aplicação para organização
+                                de tarefas utilizando
+                                JavaScript.
+                            </p>
+
+
+                            <div class="project-footer">
+
+                                <a
+                                    href="#"
+                                    class="project-link"
+                                >
+                                    Ver projeto →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================
+                         PROJETO 6
+                    ================================== -->
+
+                    <article
+                        class="project-card"
+                        data-category="design"
+                    >
+
+                        <div class="project-image project-image-six">
+
+                            <span class="project-number">
+                                06
+                            </span>
+
+                            <span class="project-tech">
+                                UI DESIGN
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <span class="project-category">
+                                DESIGN
+                            </span>
+
+                            <h3>
+                                Dashboard UI
+                            </h3>
+
+                            <p>
+                                Conceito visual de um
+                                dashboard moderno para
+                                aplicações web.
+                            </p>
+
+
+                            <div class="project-footer">
+
+                                <a
+                                    href="#"
+                                    class="project-link"
+                                >
+                                    Ver projeto →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================
+             CTA
+        =================================== -->
+
+        <section class="projects-cta">
+
+            <div class="projects-container">
+
+                <div class="cta-content">
+
+                    <span class="section-label">
+                        TEM UMA IDEIA?
+                    </span>
+
+                    <h2>
+                        Vamos transformar
+                        sua ideia em projeto.
+                    </h2>
+
+                    <p>
+                        Explore, experimente e construa
+                        algo novo.
+                    </p>
+
+
+                    <a
+                        href="login.html"
+                        class="primary-button"
+                    >
+                        Começar agora
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-logo">
+
+                <span class="logo-icon">
+                    ◆
+                </span>
+
+                <span>
+                    Soares
+                </span>
+
+            </div>
+
+
+            <p>
+                © 2026 Soares. Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
