@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Encurtador de URL</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="container">
+
+    <div class="card">
+
+      <h1>🔗 Encurtador de URL</h1>
+
+      <p class="description">
+        Transforme URLs grandes em links curtos.
+      </p>
+
+      <div class="form">
+        <input
+          type="url"
+          id="urlInput"
+          placeholder="https://exemplo.com/minha-url"
+          autocomplete="off"
+        >
+
+        <button id="shortenButton">
+          Encurtar
+        </button>
+      </div>
+
+      <p class="error" id="error"></p>
+
+      <div class="result" id="result">
+
+        <div class="result-title">
+          Sua URL encurtada:
+        </div>
+
+        <div class="short-url">
+
+          <input
+            type="text"
+            id="shortUrl"
+            readonly
+          >
+
+          <button id="copyButton">
+            Copiar
+          </button>
+
+        </div>
+
+      </div>
+
+      <section class="history">
+
+        <h2>Histórico</h2>
+
+        <div id="historyList">
+          <p class="empty">
+            Nenhum link criado ainda.
+          </p>
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
