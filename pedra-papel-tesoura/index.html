@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pedra, Papel e Tesoura</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="game">
+
+        <h1>🎮 Pedra, Papel e Tesoura</h1>
+
+        <p class="subtitle">
+            Escolha sua jogada e tente vencer o computador!
+        </p>
+
+        <section class="scoreboard">
+
+            <div class="score">
+                <span>Você</span>
+                <strong id="playerScore">0</strong>
+            </div>
+
+            <div class="vs">VS</div>
+
+            <div class="score">
+                <span>Computador</span>
+                <strong id="computerScore">0</strong>
+            </div>
+
+        </section>
+
+        <h2 class="choices-title">
+            Faça sua escolha:
+        </h2>
+
+        <div class="choices">
+
+            <button
+                class="choice"
+                data-choice="pedra"
+                aria-label="Pedra"
+            >
+                🪨
+            </button>
+
+            <button
+                class="choice"
+                data-choice="papel"
+                aria-label="Papel"
+            >
+                📄
+            </button>
+
+            <button
+                class="choice"
+                data-choice="tesoura"
+                aria-label="Tesoura"
+            >
+                ✂️
+            </button>
+
+        </div>
+
+        <section class="result">
+
+            <h2 id="resultTitle">
+                Faça sua jogada!
+            </h2>
+
+            <div class="moves">
+
+                <div class="move">
+                    <span>Você</span>
+                    <span
+                        class="move-icon"
+                        id="playerMove"
+                    >
+                        ❔
+                    </span>
+                </div>
+
+                <div class="vs">×</div>
+
+                <div class="move">
+                    <span>Computador</span>
+                    <span
+                        class="move-icon"
+                        id="computerMove"
+                    >
+                        ❔
+                    </span>
+                </div>
+
+            </div>
+
+            <p
+                class="message"
+                id="message"
+            >
+                Boa sorte! 🍀
+            </p>
+
+        </section>
+
+        <button
+            class="reset"
+            id="resetButton"
+        >
+            🔄 Reiniciar jogo
+        </button>
+
+        <section class="history">
+
+            <h3>📜 Histórico</h3>
+
+            <ul id="historyList"></ul>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
