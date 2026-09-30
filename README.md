@@ -45,4 +45,5 @@ Os projetos são independentes e possuem diferentes níveis de complexidade. Nov
 
 ---
 
-**Tecnologias:** HTML • CSS • JavaScript
+**Tecnologias:** HTML • CSS • JavaScript • React 
+
